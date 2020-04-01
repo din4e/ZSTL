@@ -20,7 +20,6 @@ private:
 		cout << "doSomethings in A\n";
 	}	
 };
-
 class b:a
 {
 	

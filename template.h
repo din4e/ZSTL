@@ -5,7 +5,7 @@
 template <class... T>
 void f(T... args)
 {
-    std::cout << sizeof...(args) << std::endl; //打印变参的个数
+    std::cout << sizeof...(args) << std::endl; 
 }
 
 void testTemplate() {
