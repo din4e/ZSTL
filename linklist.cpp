@@ -16,9 +16,6 @@ int main(){
         head->v=it;
         head->next=new node;
         head = head.next;
-        // head.v=it;
-        // head.next=new node;
-        // head      =head.next;
     }
     while(l.next!=NULL){
         cout<<l.v;
