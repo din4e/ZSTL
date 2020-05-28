@@ -9,10 +9,10 @@ void f(T... args)
 }
 
 void testTemplate() {
-    std::cout << "Hello World!\n";
+    std::cout << "testTemplate()\n";
     f();               // 0
     f(1, 2);           // 2
-    //f(1, 2.5, " ");    // 3
+    f(1, 2.5, " ");    // 3
     std::vector<int> v(4, 1);
-    f(v);
+    f(v); // 1
 }

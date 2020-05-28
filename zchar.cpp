@@ -8,5 +8,5 @@ struct zchar
 int main(){
     char y[8]="2131231";
     cout<<y<<"\n";
-    cout<<y[-3];
+    cout<<y[-3]; // y[-1]
 }
