@@ -11,6 +11,7 @@ struct znode{
 znode networks;
 vector<node> v;
 int main(){
+    queue<int,list<int>> q;
     int c;
     cout<<sizeof(v)<<endl;
     cout<<sizeof(v[0])<<endl;
