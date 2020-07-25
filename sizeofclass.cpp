@@ -47,10 +47,10 @@ int main(){
     D d;
     E e;
     cout<<sizeof(a)<<"\n"; // 16
-    cout<<sizeof(b)<<"\n"; // 16
-    cout<<sizeof(c)<<"\n"; // 8
+    cout<<sizeof(b)<<"\n"; // 16 
+    cout<<sizeof(c)<<"\n"; // 8 4+4
     cout<<sizeof(d)<<"\n"; // 8
-    cout<<sizeof(e)<<"\n";
+    cout<<sizeof(e)<<"\n"; // 1
     // cout<<a.i<<"\n"; // error
     return 0;    
 }
