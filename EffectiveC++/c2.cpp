@@ -20,7 +20,7 @@ public:
     int i;
 public:
     dobj()=default;
-    // /dobj(dobj &rhs):abase(rhs){};
+    // //dobj(dobj &rhs):abase(rhs){};
     ~dobj(){cout<<"dobj dtor.\n";};
 };
 
