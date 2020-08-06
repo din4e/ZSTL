@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+typedef void (*fun)(void) //  返回类型是void 参数是void的函数指针
 int sum(int n){
     int m=0;
     for(int i=0;i<n;++i)
