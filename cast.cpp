@@ -80,14 +80,20 @@ void func3(){
 	cout<<"addr b2->vptr[0]: " <<(Fun *)*(long *)*(long *)(&b2) <<"\n";
 	pf=(Fun)*(long *)*((long *)(&b1));pf();
 	// pf=(Fun)*(long *)*(&b2);pf(); // error
-
 	// addr b1->vptr: 0xffffcbf0
 	// addr b2->vptr: 0xffffcbe0
 	// addr b1->vptr[0]: 0x1004031c0
 	// addr b2->vptr[0]: 0x1004031c0
 }
+void func4(){
+	int a = 10; 
+	char c = 'a'; 
+	int* q = (int*) &c; 
+	//int *p = static_cast<int *>(&c);  // error
+	int *p = reinterpret_cast<int *>(&c);  // !!
+}
 int main(){
-	func3();
+	func4();
     return 0;
 }
 
