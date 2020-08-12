@@ -11,12 +11,12 @@ using namespace std;
 #define MAXLINE 4096
 
 int main(int argc, char** argv){
-    int    listenfd, connfd;
+    int    listenfd, connfd; // 为啥要分成两个啊
     struct sockaddr_in     servaddr;
     char    buff[4096];
     int     n;
 
-    if( (listenfd = socket(AF_INET, SOCK_STREAM, 0)) == -1 ){
+    if( (listenfd = socket(AF_INET, SOCK_STREAM, 0)) == -1 ){ // 
         printf("create socket error: %s(errno: %d)\n",strerror(errno),errno);
         exit(0);
     }
@@ -42,7 +42,7 @@ int main(int argc, char** argv){
             printf("accept socket error: %s(errno: %d)",strerror(errno),errno);
             continue;
         }
-        n = recv(connfd, buff, MAXLINE, 0);
+        n = recv(connfd, buff, MAXLINE, 0); // 默认是阻塞的
         buff[n] = '\0';
         printf("recv msg from client: %s\n", buff);
         close(connfd);
