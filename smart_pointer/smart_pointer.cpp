@@ -10,15 +10,18 @@ public:
     smart_pointer(const smart_pointer<T> &rhs){
 
     };
-    template<typename T2>
-    smart_pointer(const smart_pointer<T2> &rhs){
+    // template<typename T2>
+    // smart_pointer(const smart_pointer<T2> &rhs){
 
-    };
+    // };
 private:
     T *ptr;
     int cnt;
 };
 
+void func_test(){
+    
+}
 int main(){
 
     return 0;
