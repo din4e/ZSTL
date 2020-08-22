@@ -31,5 +31,6 @@ void func_auto_ptr_test(){
 }
 int main(){
     func_auto_ptr_test();
+    malloc();
     return 0;
 }

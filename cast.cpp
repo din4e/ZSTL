@@ -94,6 +94,8 @@ void func4(){
 }
 int main(){
 	func4();
+	const B b1;
+	B &b2=const_cast<B&>(b1);
     return 0;
 }
 
