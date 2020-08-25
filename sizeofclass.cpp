@@ -39,6 +39,9 @@ class D{
 class E{
 
 }; 
+class F{
+    virtual void func(){};
+}; 
 //一、定义一个空的类型，对于其对象我们sizeof其大小，是1字节。因为我们定义一个类型，编译器必须为其分配空间，具体分配多少是编译器决定，vs是1字节,分配在栈区。
 int main(){
     A a;
@@ -46,11 +49,13 @@ int main(){
     C c;
     D d;
     E e;
+    F f;
     cout<<sizeof(a)<<"\n"; // 16
     cout<<sizeof(b)<<"\n"; // 16 
     cout<<sizeof(c)<<"\n"; // 8 4+4
     cout<<sizeof(d)<<"\n"; // 8
     cout<<sizeof(e)<<"\n"; // 1
+    cout<<sizeof(f)<<"\n"; // 8 
     // cout<<a.i<<"\n"; // error
     return 0;    
 }
