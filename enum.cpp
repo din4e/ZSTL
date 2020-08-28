@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std; 
 enum Enumeration{ Val1, Val2, Val3 = 100, Val4 /* = 101 */};
-enum class Enumeration2{ Val1, Val2, Val3 = 100, Val4 /* = 101 */};
+enum class Enumeration2{ Val1, Val2, Val3 = 100, Val4 /* = 101 */}; // 禁止隐式转变
 // // Wrong
 // enum class color
 // {
