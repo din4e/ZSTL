@@ -1,7 +1,5 @@
-#pragma once
-#include<iostream>
-#include<vector>
-
+#include<bits/stdc++.h>
+using namespace std;
 template <class... T>
 void f(T... args)
 {
@@ -15,4 +13,8 @@ void testTemplate() {
     f(1, 2.5, " ");    // 3
     std::vector<int> v(4, 1);
     f(v); // 1
+}
+int main(){
+    testTemplate();
+    return 0;
 }
