@@ -27,7 +27,6 @@
 //   return 0;
 // }
 
-
 #include<bits/stdc++.h>
 using namespace std;
 typedef void (*Fun)(void);
@@ -92,10 +91,24 @@ void func4(){
 	//int *p = static_cast<int *>(&c);  // error
 	int *p = reinterpret_cast<int *>(&c);  // !!
 }
+void test_const_cast(){
+	const B* b1=new B;
+	//B &b2=const_cast<B&>(b1); //错误：从类型‘const B (*)()’到类型‘B*’中的 const_cast 无效
+	const int a = 10;
+    const int * p = &a;
+    int *q;
+    q = const_cast<int *>(p);
+    *q = 20;    //fine
+    cout <<a <<" "<<*p<<" "<<*q<<endl;
+    cout <<&a<<" "<<p <<" "<<q <<endl;
+	// 10 20 20
+	// 0xffffcbb4 0xffffcbb4 0xffffcbb4
+}
 int main(){
-	func4();
-	const B b1;
-	B &b2=const_cast<B&>(b1);
+	// func4();
+	void* t;
+	cout<<sizeof(t)<<"\n"; // 8
+	// test_const_cast();
     return 0;
 }
 
