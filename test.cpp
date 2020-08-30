@@ -47,10 +47,25 @@ void test4(){
     cout<<sizeof(i++)<<"\n"; // 编译阶段时候处理的 
     cout<<i<<"\n";    
 }
+void test5(){
+    union{
+    short s;
+    char c[2]; // sizeof(short)=2;
+    }un;
+    un.s=0x0102;
+    if(un.c[0]==1 && un.c[1]==2) cout<<"大端";
+    if(un.c[0]==2 && un.c[1]==1) cout<<"小端"; // 小端 
+}
+void test6(){
+    printf 
+    #include "test.txt"
+}
 int main(){
     // test1();
     // test2();
     // test3();
     // test4();
+    // test5();
+    test6();
     return 0;
 }
