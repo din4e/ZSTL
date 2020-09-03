@@ -45,12 +45,21 @@ void test4(){
     int i; 
     cout<<i<<"\n";
     cout<<sizeof(i++)<<"\n"; // 编译阶段时候处理的 
-    cout<<i<<"\n";    
+    cout<<i<<"\n";
+    string s;
+    string t="HELLO,WORD";
+    cout<<sizeof(s)<<" "<<sizeof(t)<<"\n";
+    vector<int> v;
+    unordered_map<int,int> m;
+    unordered_map<int,vector<int>> m2;
+    cout<<sizeof(v)<<"\n";   // 24
+    cout<<sizeof(m)<<"\n";   // 56
+    cout<<sizeof(m2)<<"\n";  // 56
 }
 void test5(){
     union{
-    short s;
-    char c[2]; // sizeof(short)=2;
+        short s;
+        char c[2]; // sizeof(short)=2;
     }un;
     un.s=0x0102;
     if(un.c[0]==1 && un.c[1]==2) cout<<"大端";
@@ -66,6 +75,6 @@ int main(){
     // test3();
     // test4();
     // test5();
-    test6();
+    // test6();
     return 0;
 }
