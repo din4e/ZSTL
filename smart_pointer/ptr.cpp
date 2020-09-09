@@ -46,12 +46,25 @@ void test_shared_ptr(){
     //shared_ptr<int> sp2 = new int(1024); // 错误：没有使用显示形式 
     shared_ptr<int> sp3(new int(1024));    // 正确：必须使用显示形式
 }
+void func(shared_ptr<int> p){
+    *p=5;
+}
+void test_shared_ptr2(){
+    int arr=6;
+    for(int i=0;i<100;++i){
+        shared_ptr<int> p=make_shared<int>(arr);
+        func(p);
+        cout<<*p<<" "<<p.use_count()<<"|";
+    }
+    cout<<"\n"; // baidu
+}
 int main(){
-    func_null();
-    func_ptr();
+    // func_null();
+    // func_ptr();
     // func_auto_ptr();
 
     // test_unique_ptr();
     // test_shared_ptr();
+    test_shared_ptr2();
     return 0;
 }

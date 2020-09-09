@@ -26,7 +26,7 @@ void test2(){
     long a=(long)(((int*)0)+4); // ?? 
     cout<<((int*)0)<<"\n";
     cout<<(((int*)0)+4)<<"\n";
-    cout<<long(((long*)0)+4)<<"\n";
+    cout<<long(((long*)0)+4)<<"\n"; 
     cout<<a<<"\n";
 }
 void test3(){
