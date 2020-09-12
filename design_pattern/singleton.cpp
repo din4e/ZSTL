@@ -113,7 +113,7 @@ private:
 
 singleton4 *singleton4::p = nullptr;
 mutex singleton4::_lock;
-singleton4::Garbo garbo;
+singleton4::Garbo singleton4::garbo;
 
 void test_singleton4(){
     singleton4 *p=singleton4::instance();
@@ -121,9 +121,9 @@ void test_singleton4(){
     cout<<p<<"\n";
 }
 int main(){
-    test_singleton1();
-    test_singleton2();
-    test_singleton3();
+    // test_singleton1();
+    // test_singleton2();
+    // test_singleton3();
     test_singleton4();
     return 0;
 }
