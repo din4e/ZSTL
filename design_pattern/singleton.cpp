@@ -120,10 +120,34 @@ void test_singleton4(){
     // singleton3 *p=singleton3::instance();
     cout<<p<<"\n";
 }
+
+class singleton5{
+public:
+    static singleton5* instance(){
+        pthread_once(&ponce_,&singleton5::init);
+        return value_;
+    }
+private:
+    singleton5();
+    // singleton5(const &singleton5 rhs)=delete;
+    ~singleton5();
+    static void init(void){
+        value_=new singleton5();
+    }
+    static pthread_once_t ponce_;
+    static singleton5 *value_;
+}; 
+pthread_once_t singleton5::ponce_ = PTHREAD_ONCE_INIT;
+singleton5 *singleton5::value_ = NULL;
+void test_singleton5(){
+    singleton5 *p=singleton5::instance();
+}
+
 int main(){
     // test_singleton1();
     // test_singleton2();
     // test_singleton3();
     test_singleton4();
+    // test_singleton5();
     return 0;
 }
